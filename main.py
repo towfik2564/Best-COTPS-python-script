@@ -22,17 +22,24 @@ if __name__ == '__main__':
     scraper = Scraper('https://cotps.com/#/pages/login/login?originSource=userCenter')
     cotps_login(scraper)
     scraper.element_click_by_xpath('//*[contains(text(), "Transaction hall")]')
-    time.sleep(2)
 
     while True:
         scraper.driver.refresh()
         time.sleep(5)
         tBalance = scraper.driver.find_element(By.XPATH, '/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[1]/uni-view[2]').text
         wBalance = scraper.driver.find_element(By.XPATH, '/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]').text  
-
-        if tBalance == "0.000" and float(wBalance) > 5:
-            scraper.element_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[4]/uni-button')
-            scraper.element_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[7]/uni-view/uni-view/uni-view[6]/uni-button[2]')
-            scraper.element_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[8]/uni-view/uni-view/uni-button')
+        delay = 10
+        if float(wBalance) > 5:
+            while float(wBalance) > 5:
+                print(f'${wBalance} available to trade')
+                scraper.element_click_by_xpath('//uni-button[contains(text(), "Immediate competition for orders")]')
+                time.sleep(5)
+                scraper.element_click_by_xpath('//uni-button[contains(text(), "Sell")]')
+                time.sleep(5)
+                scraper.element_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[8]/uni-view/uni-view/uni-button')
+                time.sleep(5)
+                print('Trade done')
+                wBalance = scraper.driver.find_element(By.XPATH, '/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]').text  
         else:
-            time.sleep(10)
+            print(f'Insufficient balance \n Waiting {delay}second to refresh')
+            time.sleep(delay)
