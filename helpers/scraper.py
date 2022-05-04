@@ -16,7 +16,7 @@ from selenium.webdriver.common.keys import Keys
 
 class Scraper:
 	# This time is used when we are waiting for element to get loaded in the html
-	wait_element_time = 30
+	wait_element_time = 10
 
 	# In this folder we will save cookies from logged in users
 	cookies_folder = 'cookies' + os.path.sep
