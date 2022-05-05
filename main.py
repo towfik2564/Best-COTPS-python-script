@@ -49,7 +49,7 @@ if __name__ == '__main__':
             
             time_str = formatted_time(waiting_for_next_trade, True)
             print('Closing browser')
-            scraper.driver.close()
+            scraper.driver.quit()
             print(f'Waiting {time_str} for next trade')
             countdown(waiting_for_next_trade)
     else:
