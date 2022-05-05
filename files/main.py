@@ -55,4 +55,3 @@ if __name__ == '__main__':
     else:
         print('This machine is not licensed')
         print("Contact it's developer at fiverr: https://www.fiverr.com/share/p956eo")
-    

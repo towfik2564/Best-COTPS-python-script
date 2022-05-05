@@ -13,6 +13,7 @@ from selenium.common.exceptions import InvalidArgumentException
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+import os
 
 class Scraper:
 	# This time is used when we are waiting for element to get loaded in the html
@@ -61,12 +62,13 @@ class Scraper:
 
 	# Setup chrome driver with predefined options
 	def setup_driver(self):
-		self.s = Service('chromedriver.exe')
+		self.s = Service('./files/chromedriver.exe')
 		self.driver = webdriver.Chrome(service=self.s, options = self.driver_options)
 		self.driver.get(self.url)	
 	
 	def cotps_login(self):
-		with open('credential.txt') as f:
+		file_dir = os.getcwd() + '\credential.txt'
+		with open(file_dir) as f:
 			code = f.readline().strip()
 			phone = f.readline().strip()
 			password = f.readline().strip()
