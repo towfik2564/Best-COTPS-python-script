@@ -8,7 +8,7 @@ if __name__ == '__main__':
     if registered:
         print('This machine is licensed')
         trade_count = 0
-        waiting_for_next_trade = 7800  #2hr15mins
+        waiting_for_next_trade = 7200  #2hr
         waiting_for_trade = 0  #5mins
 
         while True:
