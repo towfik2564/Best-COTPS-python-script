@@ -21,14 +21,14 @@ class Scraper:
 	# In this folder we will save cookies from logged in users
 	cookies_folder = 'cookies' + os.path.sep
 
-	def __init__(self, url):
+	def __init__(self, url, headless = False):
 		self.url = url
+		self.headless = headless
 		self.setup_driver_options()
 		self.setup_driver()
 
 	# Automatically close driver on destruction of the object
 	def __del__(self):
-		print('closing')
 		self.driver.close()
 		
 	# Add these options in order to make chrome driver appear as a human instead of detecting it as a bot
@@ -55,11 +55,32 @@ class Scraper:
 		for key, value in experimental_options.items():
 			self.driver_options.add_experimental_option(key, value)
 
+		if self.headless:
+			self.driver_options.add_argument('--headless')
+
+
 	# Setup chrome driver with predefined options
 	def setup_driver(self):
-		self.s = Service('C:/chromedriver/chromedriver.exe')
+		self.s = Service('chromedriver.exe')
 		self.driver = webdriver.Chrome(service=self.s, options = self.driver_options)
-		self.driver.get(self.url)
+		self.driver.get(self.url)	
+	
+	def cotps_login(self):
+		with open('credential.txt') as f:
+			code = f.readline().strip()
+			phone = f.readline().strip()
+			password = f.readline().strip()
+		code = code
+		phone = phone
+		password = password
+		print('Opening browser')
+		self.element_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[5]/uni-text')
+		self.element_send_keys_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[1]/uni-view/uni-input/div/input', code)
+		self.element_click_by_xpath("//uni-button[contains(text(), 'Confirm')]")
+		self.element_send_keys_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[5]/uni-input/div/input', phone)
+		self.element_send_keys_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[7]/uni-input/div/input', password)
+		self.element_click_by_xpath('//uni-button[contains(text(), "Log in")]')
+		print('Logged in your account')
 
 	# Add login functionality and load cookies if there are any with 'cookies_file_name'
 	def add_login_functionality(self, login_url, is_logged_in_selector, cookies_file_name):
