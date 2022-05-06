@@ -1,3 +1,4 @@
+from contextlib import closing
 import os
 import pickle
 import time
@@ -28,7 +29,8 @@ class Scraper:
 		self.setup_driver()
 
 	# Automatically close driver on destruction of the object
-	# def __del__(self):
+	def __del__(self):
+		print('closing browser')
 	# 	self.driver.close()
 		
 	# Add these options in order to make chrome driver appear as a human instead of detecting it as a bot
