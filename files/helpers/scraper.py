@@ -11,7 +11,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import InvalidArgumentException
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import os
 
@@ -29,8 +28,8 @@ class Scraper:
 		self.setup_driver()
 
 	# Automatically close driver on destruction of the object
-	def __del__(self):
-		self.driver.close()
+	# def __del__(self):
+	# 	self.driver.close()
 		
 	# Add these options in order to make chrome driver appear as a human instead of detecting it as a bot
 	# Also change the 'cdc_' string in the chromedriver.exe with Notepad++ for example with 'abc_' to prevent detecting it as a bot
