@@ -23,18 +23,11 @@ if __name__ == '__main__':
                     scraper.driver.refresh()
 
                 tBalance = scraper.find_element_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[1]/uni-view[2]', False).text
-                wBalance = scraper.find_element_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]', False).text  
+                wBalance = scraper.get_wallet()  
                 print(f'Transaction: {tBalance} || Wallet: {wBalance}')        
-
-                while isinstance(wBalance, float) is False:
-                    try: 
-                        wBalance = float(wBalance)
-                    except:
-                        time.sleep(2)
-                        wBalance = scraper.find_element_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]', False).text  
-
+               
                 if wBalance > 5:
-                    while float(wBalance) > 5:
+                    while wBalance > 5:
                         print(f'${wBalance} available to trade')
                         scraper.element_click_by_xpath('//uni-button[contains(text(), "Immediate competition for orders")]')
                         time.sleep(1)
@@ -42,7 +35,7 @@ if __name__ == '__main__':
                         time.sleep(1)
                         scraper.element_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[8]/uni-view/uni-view/uni-button')
                         time.sleep(1)
-                        wBalance = scraper.driver.find_element(By.XPATH, '/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]').text  
+                        wBalance = scraper.get_wallet()
                         print('Trade completed')
                     trade_count += 1
                     waiting_for_trade = 300
