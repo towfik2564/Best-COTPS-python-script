@@ -1,0 +1,11 @@
+{
+    "subscriptions": {
+        "notifications": [
+            {
+                "platform": "ifttt",
+                "webhook_key": "nI5r3MpBjShaTXZb4wOssnap8DMMk3B0i_PWDrwoCxw"
+            }
+        ] 
+    }
+    
+}
