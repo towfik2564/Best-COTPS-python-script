@@ -1,4 +1,4 @@
-<img src="files/resources/cotps_logo.png" align="right" />
+<img src="img/cotps_logo.png" align="right" />
 
 # BEST COTPS BOT :robot: [MAY'22] 
 > Hello, I am a programmer and side by side a Trader. Call me "Toffy". I've built the best bot/script for COTPS using python.
@@ -28,8 +28,8 @@ starts > logs in cotps > collects team bonuses > keeps checking balance at 2mins
 - notification sending to your mobile when script/vps crashes
 - notification sending to your mobile when profit arrives 
 <div style="display: flex; justify-content: center; align-items: center; height: 300px;">
-    <img src="files/resources/notification_1.jpg" height="300px" />
-    <img src="files/resources/notification_2.jpg" height="300px" />
+    <img src="img/notification_1.jpg" height="300px" />
+    <img src="img/notification_2.jpg" height="300px" />
 </div>
 
 ## Future upgrades:
