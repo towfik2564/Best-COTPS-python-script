@@ -1,15 +1,14 @@
 <img src="files/cotps_logo.png" align="right" />
 
-# BEST COTPS BOT [MAY'22] :robot:
+# BEST COTPS BOT :robot: [MAY'22] 
 > Hello, I am a programmer and side by side a Trader. Call me "Toffy". I've built the best bot/script for COTPS using python.
 
 My bot is the smartest and fastest one for using python. It consumes less ram of VPS.
 
 ## Estimated profit it generates
 
-team bonus collection = 5 seconds
+> team bonus collection = 5 seconds
 trade cycle completion = 15 seconds
------------------------------------
 total operating time needed for one cycle = 20 seconds
 waiting time for next trade cycle =  2 hr = 2*3600 seconds
 ----------------------------------------------------------
@@ -18,7 +17,6 @@ total time needed for one complete cycle =  3620 seconds
 So: in 1 month it can operate = (2592000/3620) = 716 cycles
 1 cycle of cotps trade brings .1% profit
 So: 716cycle can bring = 716*.1% profit
-
 
 ## Algorithm
 starts > logs in cotps > collects team bonuses > keeps checking balance at 5mins interval > if wallet balance greater than 5 and no transaction balance left to arrive, then it starts trading > it keeps trading until wallet is lower than 5 > when trade is over it closes browser and wait for 2hrs > keep checking balance at 5mins interval > loop goes on
