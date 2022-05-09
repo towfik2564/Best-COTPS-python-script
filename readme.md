@@ -9,13 +9,18 @@ My bot is the smartest and fastest one for using python. It consumes less ram of
 
 > team bonus collection = 5 seconds <br/>
 trade cycle completion = 15 seconds <br/>
-total operating time needed for one cycle = 20 seconds <br/>
+___________________________________________
+<br/>
+total operating time needed for one cycle = (15+6) = 20 seconds <br/>
 waiting time for next trade cycle =  2 hr = 2*3600 seconds <br/>
+_____________________________________________________________________
 total time needed for one complete cycle =  3620 seconds <br/>
-1 month contains = 30*24*60*60 seconds = 2592000 seconds <br/>
-So: in 1 month it can operate = (2592000/3620) = 716 cycles <br/>
+<br/>
+1 month contains = 30*24*60*60 = 2592000 seconds <br/>
+∴ in 1 month it can operate = (2592000/3620) = 716 cycles <br/>
+<br/>
 1 cycle of cotps trade brings .1% profit <br/>
-So: 716cycle can bring = 716*.1% profit
+∴ 716cycle can bring = 716*.1% profit
 
 ## Algorithm
 starts > logs in cotps > collects team bonuses > keeps checking balance at 5mins interval > if wallet balance greater than 5 and no transaction balance left to arrive, then it starts trading > it keeps trading until wallet is lower than 5 > when trade is over it closes browser and wait for 2hrs > keep checking balance at 5mins interval > loop goes on
