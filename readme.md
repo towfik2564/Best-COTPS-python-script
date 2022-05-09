@@ -17,7 +17,7 @@ total time needed for one complete cycle =  7215 seconds <br/>
 ∴ 716 cycles can bring = 359*0.1% = ***35.9% profit***
 
 ## Algorithm
-starts > logs in cotps > collects team bonuses > keeps checking balance at 5mins interval > if wallet balance greater than 5 and no transaction balance left to arrive, then it starts trading > it keeps trading until wallet is lower than 5 > when trade is over it closes browser and wait for 2hrs > keep checking balance at 5mins interval > loop goes on
+starts > logs in cotps > collects team bonuses > keeps checking balance at 2mins interval > if wallet balance greater than 5 and no transaction balance left to arrive, then it starts trading > it keeps trading until wallet is lower than 5 > when trade is over it closes browser and wait for 2hrs > keep checking balance at 2mins interval > loop goes on
 
 ## Current performance
 - completes one trade cycle within just 10seconds 
@@ -27,8 +27,8 @@ starts > logs in cotps > collects team bonuses > keeps checking balance at 5mins
 - notification sending to your mobile after each successful trade cycle
 - notification sending to your mobile when script/vps crashes
 - notification sending to your mobile when profit arrives 
-<img src="files/resources/notification_1.jpg" height="250px" />
-<img src="files/resources/notification_2.jpg" height="250px" />
+<img src="files/resources/notification_1.jpg" height="400px" />
+<img src="files/resources/notification_2.jpg" height="400px" />
 
 ## Future upgrades:
 - data export facility for last trades 
