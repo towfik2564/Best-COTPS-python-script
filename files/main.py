@@ -9,7 +9,7 @@ if __name__ == '__main__':
         print('This machine is licensed')
         trade_count = 0
         waiting_for_next_trade = 7200  #2hr
-        waiting_for_trade = 0  #5mins
+        waiting_for_trade = 0  #2mins
         
         while True:
             scraper = Scraper('https://cotps.com/#/pages/login/login?originSource=userCenter')
@@ -26,7 +26,7 @@ if __name__ == '__main__':
                 wBalance = scraper.get_balance('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]')  
                 print(f'Transaction: {tBalance} || Wallet: {wBalance}')        
                
-                if wBalance > 5 and tBalance != 0.000:
+                if wBalance > 5 and tBalance < 1:
                     send_notifications("WALLET_ARRIVED")
                     while wBalance > 5:
                         print(f'${wBalance} available to trade')
@@ -39,7 +39,7 @@ if __name__ == '__main__':
                         wBalance = scraper.get_balance('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]')
                         print('Trade completed')
                     trade_count += 1
-                    waiting_for_trade = 300
+                    waiting_for_trade = 120
                     trade_waiting_loop = 0
                     send_notifications("TRADE_CYCLED")
                     print(f'Total trade done: {trade_count}times')
@@ -47,7 +47,7 @@ if __name__ == '__main__':
                 else:
                     trade_waiting_loop += 1
                     if waiting_for_trade == 0:
-                        waiting_for_trade = 300
+                        waiting_for_trade = 120
                     time_str = formatted_time(waiting_for_trade)
                     print(f'Insufficient balance \nWaiting {time_str} for expected balance')
                     countdown(waiting_for_trade)

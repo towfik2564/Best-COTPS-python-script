@@ -27,21 +27,20 @@ total time needed for one complete cycle =  3615 seconds <br/>
 starts > logs in cotps > collects team bonuses > keeps checking balance at 5mins interval > if wallet balance greater than 5 and no transaction balance left to arrive, then it starts trading > it keeps trading until wallet is lower than 5 > when trade is over it closes browser and wait for 2hrs > keep checking balance at 5mins interval > loop goes on
 
 ## Current performance
-- completes one trade cycle within just 15seconds 
+- completes one trade cycle within just 10seconds 
 - takes only 5seconds for collecting team bonus before every trade cycle
 
 ## Features 
 - notification sending to your mobile after each successful trade cycle
 - notification sending to your mobile when script/vps crashes
 - notification sending to your mobile when profit arrives 
-<div style="display:flex;justify-content: center;align-items:center;">
-    <img src="files/resources/notification_1.jpg" height="400px" align="center" />
-    <img src="files/resources/notification_2.jpg" height="400px" align="center" />
-</div>
+<img src="files/resources/notification_1.jpg" height="400px" />
+<img src="files/resources/notification_2.jpg" height="400px" />
 
 ## Future upgrades:
 - data export facility for last trades 
 
+## Demo
 Here is the [demo of this bot](https://www.loom.com/share/e57f284c7c6e416ba894a77ce93eb83f) 
 
 ## Purchase from
