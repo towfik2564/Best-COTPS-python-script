@@ -31,7 +31,7 @@ starts > logs in cotps > collects team bonuses > keeps checking balance at 2mins
     <img src="img/notification_1.jpg" height="300px" />
     <img src="img/notification_2.jpg" height="300px" />
 </div>
-***Note:** notification sending process requires manual setup for each user, so this service needs additional payment
+Note: notification sending process requires manual setup for each user, so this service needs additional payment
 
 ## Future upgrades:
 - data export facility for last trades 
