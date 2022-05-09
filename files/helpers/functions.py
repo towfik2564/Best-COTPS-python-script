@@ -23,7 +23,6 @@ def countdown(t):
 
 def validate_machine():
     machine_id = socket.gethostname()
-    print(f"ID of this machine: {machine_id}")
     print('Validating machine license')
     sheet_url = "https://docs.google.com/spreadsheets/d/1JsEsTGr4BdVTKDg8ulJJewG81dcHb6WfzXiBbWkasNQ/edit#gid=0"
     url = sheet_url.replace("/edit#gid=", "/export?format=csv&gid=")
