@@ -35,6 +35,7 @@ Note: notification sending process requires manual setup for each user, so this 
 
 ## Future upgrades:
 - data export facility for last trades 
+- cool interface
 
 ## Demo
 Here is the [demo of this bot](https://www.loom.com/share/e57f284c7c6e416ba894a77ce93eb83f) 
