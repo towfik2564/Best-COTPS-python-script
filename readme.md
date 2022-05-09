@@ -27,8 +27,10 @@ starts > logs in cotps > collects team bonuses > keeps checking balance at 2mins
 - notification sending to your mobile after each successful trade cycle
 - notification sending to your mobile when script/vps crashes
 - notification sending to your mobile when profit arrives 
-<img src="files/resources/notification_1.jpg" height="400px" />
-<img src="files/resources/notification_2.jpg" height="400px" />
+<div style="display: flex; justify-content: center; align-items: center; height: 300px;">
+    <img src="files/resources/notification_1.jpg" height="300px" />
+    <img src="files/resources/notification_2.jpg" height="300px" />
+</div>
 
 ## Future upgrades:
 - data export facility for last trades 
