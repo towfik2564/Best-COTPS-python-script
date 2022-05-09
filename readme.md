@@ -35,8 +35,8 @@ starts > logs in cotps > collects team bonuses > keeps checking balance at 5mins
 - notification sending to your mobile when script/vps crashes
 - notification sending to your mobile when profit arrives 
 <div style="display:flex;justify-content: center;align-items:center;">
-    <img src="files/resources/notification_1.jpg" height="400px" />
-    <img src="files/resources/notification_2.jpg" height="400px" />
+    <img src="files/resources/notification_1.jpg" height="400px" align="center" />
+    <img src="files/resources/notification_2.jpg" height="400px" align="center" />
 </div>
 
 ## Future upgrades:
