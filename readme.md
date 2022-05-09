@@ -31,7 +31,7 @@ starts > logs in cotps > collects team bonuses > keeps checking balance at 2mins
     <img src="img/notification_1.jpg" height="300px" />
     <img src="img/notification_2.jpg" height="300px" />
 </div>
-_ notification sending process requires manual setup for each user, so this service needs additional payment _
+***Note:** notification sending process requires manual setup for each user, so this service needs additional payment
 
 ## Future upgrades:
 - data export facility for last trades 
@@ -41,4 +41,4 @@ Here is the [demo of this bot](https://www.loom.com/share/e57f284c7c6e416ba894a7
 
 ## Purchase from
 - [fiverr](https://www.fiverr.com/share/ERl0x0) 
-- telegram/whatsapp: +8801704411884  
+- telegram/whatsapp: ***+8801704411884***  
