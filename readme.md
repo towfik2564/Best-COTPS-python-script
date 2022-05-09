@@ -6,22 +6,15 @@
 My bot is the smartest and fastest one for using python. It consumes less ram of VPS.
 
 ## Estimated profit it generates
-
 team bonus collection = 5 seconds <br/>
 trade cycle completion = 10 seconds <br/>
-___________________________________________
-<br/>
-total operating time needed for one cycle = (10+5) = 15 seconds <br/>
-waiting time for next trade cycle =  2 hr = 2*3600 seconds <br/>
-_____________________________________________________________________
-<br/>
-total time needed for one complete cycle =  3615 seconds <br/>
-<br/>
+∴ total operating time needed for one cycle = (10+5) = 15 seconds <br/>
+waiting time for next trade cycle =  2 hr = 2*3600 = 7215 seconds <br/>
+total time needed for one complete cycle =  7215 seconds <br/>
 1 month contains = 30*24*60*60 = 2592000 seconds <br/>
-∴ in 1 month it can operate = (2592000/3620) = 717 cycles <br/>
-<br/>
+∴ in 1 month it can operate = (2592000/3620) = 359 cycles <br/>
 1 cycle of cotps trade brings .1% profit <br/>
-∴ 716 cycles can bring = 717*0.1% = 71.7% profit
+∴ 716 cycles can bring = 359*0.1% = ***35.9% profit***
 
 ## Algorithm
 starts > logs in cotps > collects team bonuses > keeps checking balance at 5mins interval > if wallet balance greater than 5 and no transaction balance left to arrive, then it starts trading > it keeps trading until wallet is lower than 5 > when trade is over it closes browser and wait for 2hrs > keep checking balance at 5mins interval > loop goes on
@@ -34,8 +27,8 @@ starts > logs in cotps > collects team bonuses > keeps checking balance at 5mins
 - notification sending to your mobile after each successful trade cycle
 - notification sending to your mobile when script/vps crashes
 - notification sending to your mobile when profit arrives 
-<img src="files/resources/notification_1.jpg" height="400px" />
-<img src="files/resources/notification_2.jpg" height="400px" />
+<img src="files/resources/notification_1.jpg" height="250px" />
+<img src="files/resources/notification_2.jpg" height="250px" />
 
 ## Future upgrades:
 - data export facility for last trades 
