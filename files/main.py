@@ -50,7 +50,7 @@ if __name__ == '__main__':
                         if waiting_for_trade == 0:
                             waiting_for_trade = 120
                         time_str = formatted_time(waiting_for_trade)
-                        print(f'Insufficient balance \nWaiting {time_str} for expected balance')
+                        print(f'Waiting {time_str} for expected balance')
                         countdown(waiting_for_trade)
                 
                 time_str = formatted_time(waiting_for_next_trade, True)
