@@ -3,7 +3,21 @@
         "notifications": [
             {
                 "platform": "ifttt",
-                "webhook_key": "nI5r3MpBjShaTXZb4wOssnap8DMMk3B0i_PWDrwoCxw"
+                "webhook_key": "nI5r3MpBjShaTXZb4wOssnap8DMMk3B0i_PWDrwoCxw",
+                "events": [
+                    {
+                        "title": "WALLET_ARRIVED",
+                        "permission": true
+                    },
+                    {
+                        "title": "TRADE_CYCLED",
+                        "permission": true
+                    },
+                    {
+                        "title": "SCRIPT_STOPPED",
+                        "permission": true
+                    }
+                ]
             }
         ] 
     }

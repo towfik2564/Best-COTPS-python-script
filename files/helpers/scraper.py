@@ -253,15 +253,15 @@ class Scraper:
 
 		return element
 
-	def get_wallet(self):
-		wBalance = self.find_element_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]', False).text
-		while isinstance(wBalance, float) is False:
+	def get_balance(self, selector):
+		balance = self.find_element_by_xpath(selector, False).text
+		while isinstance(balance, float) is False:
 			try: 
-				wBalance = float(wBalance)
+				balance = float(balance)
 			except:
 				time.sleep(2)
-				wBalance = self.find_element_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]', False).text  
-		return wBalance
+				balance = self.find_element_by_xpath(selector, False).text  
+		return balance
 
 
 	def click_checkbox(self, selector_position):
