@@ -7,7 +7,7 @@ My bot is the smartest and fastest one for using python. It consumes less ram of
 
 ## Estimated profit it generates
 
-> team bonus collection = 5 seconds
+> team bonus collection = 5 seconds \n
 trade cycle completion = 15 seconds
 total operating time needed for one cycle = 20 seconds
 waiting time for next trade cycle =  2 hr = 2*3600 seconds
