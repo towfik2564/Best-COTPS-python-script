@@ -295,10 +295,15 @@ class Scraper:
 
 		element.click()
 	
-	def click_element_untill_xpath(self, xpath):
+	def click_element_untill_xpath(self, xpath, loop_count=5):
 		element = False
+		loop_running = 0
 		while not element:
-			element = self.element_click_by_xpath(xpath)
+			if loop_count != loop_running:
+				element = self.element_click_by_xpath(xpath)
+				break
+			else: 
+				loop_running += 1
 
 	# Wait random time before cliking on the element
 	def element_click_by_xpath(self, xpath, exit_on_missing_element=False, delay = True):
