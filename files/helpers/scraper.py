@@ -294,15 +294,26 @@ class Scraper:
 		element = self.find_element(selector)
 
 		element.click()
+	
+	def click_element_untill_xpath(self, xpath):
+		element = False
+		while not element:
+			element = self.element_click_by_xpath(xpath)
 
 	# Wait random time before cliking on the element
-	def element_click_by_xpath(self, xpath, delay = True):
+	def element_click_by_xpath(self, xpath, exit_on_missing_element=False, delay = True):
 		if delay:
 			self.wait_random_time()
 
-		element = self.find_element_by_xpath(xpath)
-
-		element.click()
+		try: 
+			element = self.find_element_by_xpath(xpath)
+			element.click()
+		except:
+			if exit_on_missing_element:
+				exit()
+			else:
+				return False
+		return element
 
 	# Wait random time before sending the keys to the element
 	def element_send_keys(self, selector, text, delay = True):

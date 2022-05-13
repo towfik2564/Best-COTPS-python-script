@@ -15,7 +15,7 @@ if __name__ == '__main__':
             while True:
                 scraper = Scraper('https://cotps.com/#/pages/login/login?originSource=userCenter')
                 scraper.cotps_login()
-                scraper.element_click_by_xpath('//*[contains(text(), "Transaction hall")]')
+                scraper.click_element_untill_xpath('//*[contains(text(), "Transaction hall")]')
                 time.sleep(3)
                 trade_waiting_loop = 0
 
@@ -32,11 +32,11 @@ if __name__ == '__main__':
                             send_notifications("WALLET_ARRIVED")
                             while wBalance >= 5:
                                 print(f'${wBalance} available to trade')
-                                scraper.element_click_by_xpath('//uni-button[contains(text(), "Immediate competition for orders")]')
+                                scraper.click_element_untill_xpath('//uni-button[contains(text(), "Immediate competition for orders")]')
                                 time.sleep(1)
-                                scraper.element_click_by_xpath('//uni-button[contains(text(), "Sell")]')
+                                scraper.click_element_untill_xpath('//uni-button[contains(text(), "Sell")]')
                                 time.sleep(1)
-                                scraper.element_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[8]/uni-view/uni-view/uni-button')
+                                scraper.click_element_untill_xpath('//uni-button[contains(text(), "Confirm")]')
                                 time.sleep(1)
                                 wBalance = scraper.get_balance('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]')
                                 print('Trade completed')
