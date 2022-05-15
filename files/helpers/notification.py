@@ -8,7 +8,7 @@ def post_notification(status, webhook):
     return res.text
 
 def send_notifications(status):
-    subscriptions = json.load(open('files/info.json'))
+    subscriptions = json.load(open(os.getcwd() +'\\info.json'))
     subscriptions = subscriptions['subscriptions']
     if len(subscriptions['notifications']) > 0:
         for platform in subscriptions['notifications']:

@@ -63,13 +63,13 @@ class Scraper:
 
 	# Setup chrome driver with predefined options
 	def setup_driver(self):
-		self.chrome_path = os.getcwd() + '\\files\chromedriver.exe'
+		self.chrome_path = os.getcwd() + '\\chromedriver.exe'
 		self.s = Service(self.chrome_path)
 		self.driver = webdriver.Chrome(service=self.s, options = self.driver_options)
 		self.driver.get(self.url)	
 	
 	def cotps_login(self):
-		file_dir = os.getcwd() + '\\files\credential.txt'
+		file_dir = os.getcwd() + '\\credential.txt'
 		with open(file_dir) as f:
 			code = f.readline().strip()
 			phone = f.readline().strip()
