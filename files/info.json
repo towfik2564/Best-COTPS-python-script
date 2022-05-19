@@ -3,19 +3,19 @@
         "notifications": [
             {
                 "platform": "ifttt",
-                "webhook_key": "",
+                "webhook_key": "nI5r3MpBjShaTXZb4wOssnap8DMMk3B0i_PWDrwoCxw",
                 "events": [
                     {
                         "title": "WALLET_ARRIVED",
-                        "permission": false
+                        "permission": true
                     },
                     {
                         "title": "TRADE_CYCLED",
-                        "permission": false
+                        "permission": true
                     },
                     {
                         "title": "SCRIPT_STOPPED",
-                        "permission": false
+                        "permission": true
                     }
                 ]
             }
