@@ -15,7 +15,7 @@ if __name__ == '__main__':
             while True:
                 scraper = Scraper('https://cotps.com/#/pages/login/login?originSource=userCenter')
                 scraper.cotps_login()
-                scraper.click_element_untill_xpath('//*[contains(text(), "Transaction hall")]')
+                scraper.element_force_click_by_xpath('//*[contains(text(), "Transaction hall")]')
                 time.sleep(3)
                 trade_waiting_loop = 0
 
@@ -32,12 +32,9 @@ if __name__ == '__main__':
                             send_notifications("WALLET_ARRIVED")
                             while wBalance >= 5:
                                 print(f'${wBalance} available to trade')
-                                scraper.click_element_untill_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[4]/uni-button')
-                                time.sleep(1)
-                                scraper.click_element_untill_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[7]/uni-view/uni-view/uni-view[6]/uni-button[2]')
-                                time.sleep(1)
-                                scraper.click_element_untill_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[8]/uni-view/uni-view/uni-button')
-                                time.sleep(1)
+                                scraper.element_force_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[4]/uni-button')
+                                scraper.element_force_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[7]/uni-view/uni-view/uni-view[6]/uni-button[2]')
+                                scraper.element_force_click_by_xpath('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[8]/uni-view/uni-view/uni-button')
                                 wBalance = scraper.get_balance('/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view[2]/uni-view[2]')
                                 print('Trade completed')
                             trade_count += 1
